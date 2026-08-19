@@ -31,8 +31,8 @@ class DodgeGame {
   private gameOverScreen: HTMLElement
   private enemySpawnRate: number = 1500
   private enemySpeed: number = 3
-  private spawnTimer: NodeJS.Timer | null = null
-  private gameTimer: NodeJS.Timer | null = null
+  private spawnTimer: ReturnType<typeof setInterval> | null = null
+  private gameTimer: ReturnType<typeof setInterval> | null = null
   private keys: { [key: string]: boolean } = {}
 
   constructor() {
@@ -260,4 +260,4 @@ class DodgeGame {
   }
 }
 
-const game = new DodgeGame()
+new DodgeGame()
