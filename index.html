@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ドッジゲーム - 敵を避けろ！</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="game-container">
+        <div class="game-header">
+          <h1>🎮 ドッジゲーム</h1>
+          <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+            <div class="health">Health: <span id="health">3</span>❤️</div>
+          </div>
+        </div>
+        
+        <div class="game-area">
+          <div id="player" class="player">🚀</div>
+          <div id="enemies-container"></div>
+          <div id="particles"></div>
+        </div>
+
+        <div id="gameOverScreen" class="game-over hidden">
+          <div class="game-over-content">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Level Reached: <span id="finalLevel">1</span></p>
+            <button id="restartBtn">🔄 もう一度プレイ</button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <p>⬅️ ➡️ で移動 | スペースキーでゲーム開始/一時停止</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
